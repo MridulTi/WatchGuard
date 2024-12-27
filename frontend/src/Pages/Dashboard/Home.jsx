@@ -1,6 +1,5 @@
 import React from "react";
 import { AspectRatio } from "../../components/ui/aspect-ratio";
-import { useDashboardContext } from "./DashboardContext";
 import {
   HoverCard,
   HoverCardContent,
@@ -10,6 +9,7 @@ import { CameraIcon } from "@radix-ui/react-icons";
 import { Badge } from "../../components/ui/badge";
 import { Camera } from "../../assets/Camera";
 import { Dash_Cam } from "../../components/Card";
+import { useDashboardContext } from "../../Context/DashboardContext";
 
 export default function Home() {
   const { cameraVisibility } = useDashboardContext();

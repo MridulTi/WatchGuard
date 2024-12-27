@@ -15,7 +15,8 @@ import { ExclamationTriangleIcon } from "@radix-ui/react-icons";
 import { FaWhatsapp } from "react-icons/fa";
 import VideoFeed from "../../components/VideoFeed";
 import axios from "axios";
-import { useDashboardContext } from "../Dashboard/DashboardContext";
+import { useDashboardContext } from "../../Context/DashboardContext";
+
 
 export default function Monitoring() {
   const {Alert,handleAlert}=useDashboardContext();

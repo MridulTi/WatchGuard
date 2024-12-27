@@ -15,11 +15,11 @@ import { RiSettings4Fill } from "react-icons/ri"
 import { useEffect, useState } from "react";
 import { Dash_Card, Mon_Card } from "../../components/Card";
 import { Camera } from "../../assets/Camera";
-import { useDashboardContext } from "../Dashboard/DashboardContext";
 import { Toaster, toast } from "sonner";
 import Toast from "../../components/Toast";
 import { Badge } from "../../components/ui/badge";
 import { Button, Card, CardBody, CardFooter, Dialog, IconButton, Select, Switch, Typography ,Option} from "@material-tailwind/react";
+import { useDashboardContext } from "../../Context/DashboardContext";
 
 const MainLayout = () => {
   const [allert, setAlert] = useState(false);

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Toaster, toast } from "sonner";
 import axios from "axios";
-import { useDashboardContext } from "../Pages/Dashboard/DashboardContext";
+import { useDashboardContext } from "../Context/DashboardContext";
 
 function Toast(props) {
   const handleReportClick = () => {

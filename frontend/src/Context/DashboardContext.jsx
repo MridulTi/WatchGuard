@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState } from 'react';
-import { Camera } from '../../assets/Camera';
+import { Camera } from '../assets/Camera';
 
 const DashboardContext = createContext();
 
@@ -8,6 +8,10 @@ export const useDashboardContext = () => useContext(DashboardContext);
 export const DashboardProvider = ({ children }) => {
   const [cameraVisibility, setCameraVisibility] = useState(Camera);
   const [Alert,setAlert]=useState(false)
+  const [loggedIn,setLoggedIn]=useState(false)
+  const [user, setUser] = useState(null);
+  const [accessToken, setAccessToken] = useState(null);
+
   const toggleCameraVisibility = (slug) => {
     setCameraVisibility((prevVisibility) =>
       prevVisibility.map((camera) =>
@@ -20,7 +24,13 @@ export const DashboardProvider = ({ children }) => {
   }
 
   return (
-    <DashboardContext.Provider value={{ cameraVisibility, toggleCameraVisibility ,handleAlert,Alert }}>
+    <DashboardContext.Provider value={{ 
+      cameraVisibility, toggleCameraVisibility ,
+      handleAlert,Alert,
+      loggedIn,setLoggedIn,
+      user, setUser,
+      accessToken, setAccessToken
+    }}>
       {children}
     </DashboardContext.Provider>
   );

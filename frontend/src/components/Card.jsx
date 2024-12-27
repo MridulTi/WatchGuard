@@ -2,10 +2,10 @@ import React from "react";
 
 import { Badge } from "@/components/ui/badge";
 import { CameraIcon } from "@radix-ui/react-icons";
-import { useDashboardContext } from "../Pages/Dashboard/DashboardContext";
 import { Link } from "react-router-dom";
 import { HoverCard, HoverCardContent, HoverCardTrigger } from "./ui/hover-card";
 import { Switch } from "@material-tailwind/react";
+import { useDashboardContext } from "../Context/DashboardContext";
 
 export function Dash_Card(props) {
   const { cameraVisibility, toggleCameraVisibility } = useDashboardContext();
